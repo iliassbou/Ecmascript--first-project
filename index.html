@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Document</title>
+    <script src="js/Script.js" defer type="module"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="app">
+            <section class="my-4">
+                <h2>Formulaire pour ajoute les Etudiants</h2>
+                <form>
+                    <div class="row">
+                        <div class="col form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="Place your name here" id="name">
+                        </div>
+                        <div class="col form-group">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" placeholder="date de naissance" id="date">
+                        </div>
+                        <div class="col form-group">
+                            <label for="note" class="form-label">Note</label>
+                            <input type="number" max="20" min="0" step="0.1" class="form-control" placeholder="La note"
+                                id="note">
+                        </div>
+                        <div class="col form-group py-4 text-center" id="btn-add">
+                            <div class="btn btn-sm btn-success px-5">Ajouter</div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <div class="table-responsive">
+                <div class="d-flex justify-content-between py-3">
+                    <h1>La liste des Etudiants</h1>
+                    <button type="button" class="btn btn-primary btn-sm" id="refresh">Actualise la liste</button>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr class="table-primary">
+                            <th class="th-attribute" role="button" scope="col" data-name="id">#Id<span class="th-arrow" style="margin-left:0.5rem;"></span></th>
+                            <th class="th-attribute" role="button" scope="col" data-name="name">Name<span class="th-arrow" style="margin-left:0.5rem;"></span></th>
+                            <th class="th-attribute" role="button" scope="col" data-name="date">BirthDay<span class="th-arrow" style="margin-left:0.5rem;"></span></th>
+                            <th class="th-attribute" role="button" scope="col" data-name="note">Note<span class="th-arrow" style="margin-left:0.5rem;"></span></th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="list-etudiants">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
