@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+/*---------- background color ----------*/
+
+body .student-form {
+    background: rgb(232,198,105);
+    background: linear-gradient(45deg, rgba(232,198,105,1) 0%, rgba(255,223,139,1) 100%);
+}
+
+body .student-list{
+    background: rgb(45,61,65);
+    background: linear-gradient(45deg, rgba(45,61,65,1) 0%, rgba(92,121,129,1) 100%);
+}
+
+
+/*------------- Form Style -------------*/
+
+.form-title {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7vw;
+    word-spacing: -4vw;
+    letter-spacing: -0.5vw;
+}
+
+#app .student-form .form-group input {
+    border-radius: 15px;
+    height: 4.5rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    background-color: #f1e0b3;
+}
+
+#app .student-form .form-group input::placeholder {
+    font-size: 25px;
+    font-family: "monospace", roboto;
+    font-weight: bolder;
+    color: black;
+}
+
+#app .student-form .form-group input::-webkit-datetime-edit {
+     padding: 1em; 
+    }
+
+#app .student-form .form-group input::-webkit-datetime-edit-fields-wrapper { 
+    color: black;
+    font-size: 25px;
+    font-family: "monospace", roboto;
+    font-weight: bolder;
+}
+
+#app .student-form .form-group input::-webkit-calendar-picker-indicator { 
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#app .student-form .form-group input::-webkit-inner-spin-button {
+    transform: scale(2);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#app .student-form .form-group#btn-add .btn{
+    background-color: #b75b6f !important;
+    border: none;
+    border-radius: 50px;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 200;
+    font-size: 1.5rem;
+    font-style: normal;
+    color: aliceblue;
+    height: 5rem;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+    align-content: center;
+}
+
+#app .student-form .student-illustration img{
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+
+/*------------- Students List Style -------------*/
+
+.table-responsive .list-title {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7vw;
+    color: aliceblue;
+    word-spacing: -3vw;
+    letter-spacing: -0.6vw;
+}
+
+.table-responsive .title button {
+    color: #2d3d41;
+    background-color: #AFD198;
+    border: none;
+    border-radius: 30px;
+    height: 3rem;
+    padding-left:  2rem;
+    padding-right: 2rem ;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    font-style: normal;
+}
+
+.table-responsive .title button:hover {
+    color: aliceblue;
+    background-color: #6a8a54;
+}
+
+.table-responsive .title button:active {
+    color: aliceblue !important;
+    background-color: #6a8a54 !important;
+}
+
+section.table-responsive {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+section.student-list .table tr.table-primary th {
+    border: 2px solid #5e95a0;
+    background-color: #5e95a0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: aliceblue;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+section.student-list .table tbody tr td{
+    border: 2px solid #5e95a0;
+    background-color: transparent;
+    color: aliceblue;
+}
+
+section.student-list .table tbody tr td .delete{
+    border: 2px solid #ff7878;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: transparent;
+    color: #ff7878;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "monospace", sans-serif;
+}
+
+section.student-list .table tbody tr td .delete:hover{
+    background-color: #ff7878;
+    color: aliceblue;
+}
+
+/*------------- Responsive -----------*/
+
+@media screen and (max-width: 480px) {
+
+    /*------------- Form Style -------------*/
+
+    .form-title {
+        font-size: 17vw;
+        word-spacing: -8vw;
+        letter-spacing: -1.5vw;
+    }
+
+    #app .student-form .form-group#btn-add .btn{
+        font-size: 1.3rem;
+        width: 100%;
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+        align-content: center;
+        text-align: center;
+    }
+
+    
+    #app .student-form .form-group input::placeholder,
+    #app .student-form .form-group input::-webkit-calendar-picker-indicator,
+    #app .student-form .form-group input::-webkit-datetime-edit-fields-wrapper {
+        font-size: 18px;
+    }
+    
+    
+    /*------------- Students List Style -------------*/
+
+    .table-responsive .list-title {
+        font-size: 13vw;
+        word-spacing: -7vw;
+        letter-spacing: -.7vw;
+    }
+
+    section.table-responsive {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    section.student-list .table tbody tr td .delete {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        padding-bottom: 0rem;
+        padding-top: 0rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    section.student-list .table tr.table-primary th {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+}

@@ -41,11 +41,11 @@ const displayEtudiants = async function () {
             } = data
             const etudiant = new Etudiant(name, date, note)
             return `<tr>
-                        <th scope="row">${id}</th>
+                        <td scope="row">${id}</td>
                         <td>${etudiant.name}</td>
                         <td>${etudiant.getAge()}</td>
                         <td><span class="badge rounded-pill ${etudiant.siAdmitted()? 'text-bg-success':'text-bg-danger'}">${etudiant.note} / ${Etudiant.MAX_NOTE}</span></td>
-                        <td><button type="button" class="btn btn-danger delete" data-id="${id}">Supprime</button></td>
+                        <td><button type="button" class="btn btn-danger delete" data-id="${id}"><span class="d-none d-md-inline">Supprime</span> 🗑</button></td>
                     </tr>`
         })
     })
@@ -105,14 +105,6 @@ window.toggleDirection = () => {
     filterBySetting.desc = !filterBySetting.desc
     renderEtudiants()
 }
-
-
-
-// window.renderSort = (column) => {
-//     if(filterBySetting.column === column){
-//         return `<span>${(filterBySetting.desc)?'▾':'▴'}</span>`
-//     }
-// }
 
 const init = function () {
     const refreshBody = document.querySelector('#refresh')
